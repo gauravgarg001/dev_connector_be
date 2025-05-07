@@ -50,10 +50,7 @@ async function getUserById(req,res){
 
     try{
         const user = await getSingleUser(id);
-        res.status(200).json({
-            data: user,
-            message: "user fetch successfully" 
-        });
+        res.status(200).json(user);
     } catch(error){
         console.log(error, "error")
         res.status(500).json({ message: error });

@@ -31,7 +31,6 @@ const upload = multer({
 ]);
 
 const handleUpload = (req, res, next) => {
-  console.log(req.body)
   upload(req, res, (err) => {
     if (err instanceof multer.MulterError) {
       return res.status(400).json({ error: `Multer error: ${err.message}` });

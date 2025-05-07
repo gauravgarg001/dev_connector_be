@@ -35,7 +35,6 @@ async function deleteUser(id){
 
 async function updateUser(id,data){
 
-    console.log("data", id,data);
     try{
         let new_user = await User.findByIdAndUpdate({_id: id}, data, {new: true });
         return new_user;

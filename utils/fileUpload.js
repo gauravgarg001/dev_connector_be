@@ -33,10 +33,8 @@ const uploadFiles = async (files) => {
       photo: results.photo?.secure_url || null,
       video: results.video?.secure_url || null
     };
-    console.log('result', result);
     return result;
   } catch (error) {
-    console.error('Upload error:', error);
     throw new Error('File upload failed');
   }
 };
